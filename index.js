@@ -40,9 +40,8 @@ socket.on("login",(data)=>{
 
 
 
-const port = 3000
-server.listen(port, ()=>{
+const PORT = process.env.PORT || 3000;
 
-    console.log(`chat server is working at port ${port}`)
-
-} )
+server.listen(PORT, ()=>{
+    console.log(`chat server is working at port ${PORT}`)
+})
